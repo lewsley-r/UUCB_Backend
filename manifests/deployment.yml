@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lewsleyruucbbackend 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lewsleyruucbbackend
+  template:
+    metadata:
+      labels:
+        app: lewsleyruucbbackend 
+    spec:
+      containers:
+        - name: lewsleyruucbbackend 
+          image: uucbregistry.azurecr.io/lewsleyruucbbackend
+          ports:
+          - containerPort: 80
